@@ -13,6 +13,10 @@ module.exports = {
         test: /\.css$/i, // .css 로 끝나는 파일은
         use: ["style-loader", "css-loader"], // 이 loader를 사용해 번들링한다.
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
 };
